@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* ── 1. 실제 CSS 변수 (body 등 일반 CSS에서 var()로 사용) ── */
+:root {
+  --primary:       #672be0;
+  --primary-light: #8a52e8;
+  --primary-bg:    #f0ebfc;
+  --bg:            #f7f7fb;
+  --surface:       #ffffff;
+  --border:        #e5e5ef;
+  --text:          #1a1a2e;
+  --text-muted:    #8888aa;
+  --success:       #2db87d;
+  --danger:        #e05252;
+  --danger-light:  #fdecea;
+}
+
+/* ── 2. Tailwind 유틸리티 등록 (bg-primary, text-primary 등 생성) ── */
+@theme inline {
+  --color-primary:      var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-bg:   var(--primary-bg);
+  --color-bg:           var(--bg);
+  --color-surface:      var(--surface);
+  --color-border:       var(--border);
+  --color-text:         var(--text);
+  --color-text-muted:   var(--text-muted);
+  --color-success:      var(--success);
+  --color-danger:       var(--danger);
+  --color-danger-light: var(--danger-light);
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px 80px;
+  line-height: 1.5;
+}
